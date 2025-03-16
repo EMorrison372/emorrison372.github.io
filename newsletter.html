@@ -2,9 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter | E.B. Morrison | MM Romance Author</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+<header>
+    <!-- Same header as other pages -->
+    <div class="header-container">
+        <h1 class="author-name">E.B. Morrison</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
+<main>
+    <section class="newsletter-container">
+        <h2>Join My Newsletter</h2>
+
+        <div class="newsletter-content">
+            <div class="newsletter-info">
+                <h3>Stay Connected</h3>
+
+                <p>Subscribe to receive updates on:</p>
+                <ul class="newsletter-benefits">
+                    <li>New book announcements and release dates</li>
+                    <li>Cover reveals before they're shared publicly</li>
+                    <li>Behind-the-scenes looks at my writing process</li>
+                    <li>Exclusive excerpts and bonus content</li>
+                    <li>Special subscriber-only giveaways</li>
+                </ul>
+
+                <p>I respect your inbox! Emails are sent approximately once a month, with occasional special announcements for important news.</p>
+            </div>
+
+            <div class="signup-form">
+                <!-- This is a placeholder. You'll replace this with the actual form code from your email service provider -->
+                <form action="#" method="post" id="newsletter-signup">
+                    <div class="form-group">
+                        <label for="name">First Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group consent">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="consent" name="consent" required>
+                        </div>
+                        <div class="consent-text">
+                            <label for="consent">I consent to receiving emails from E.B. Morrison. I understand I can unsubscribe at any time.</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="signup-button">Subscribe</button>
+                </form>
+
+                <p class="privacy-note">Your information will never be shared with third parties. View my <a href="#">Privacy Policy</a>.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <!-- Same footer as other pages -->
+    <div class="social-links">
+        <a href="#" class="social-icon">BlueSky</a>
+        <a href="#" class="social-icon">Goodreads</a>
+    </div>
+    <p>&copy; 2025 E.B. Morrison. All rights reserved.</p>
+</footer>
 </body>
 </html>
+

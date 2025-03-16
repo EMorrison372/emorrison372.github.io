@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E.B. Morrison | MM Romance Author</title>
+    <title>Contact | E.B. Morrison | MM Romance Author</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,7 @@
 </head>
 <body>
 <header>
+    <!-- Same header as other pages -->
     <div class="header-container">
         <h1 class="author-name">E.B. Morrison</h1>
         <nav>
@@ -26,48 +27,71 @@
 </header>
 
 <main>
-    <section class="hero">
-        <div class="hero-content">
-            <h2>MM Romance Author</h2>
-            <p>Stories of love, adventure, and finding home</p>
-            <a href="books.html" class="cta-button">Coming Soon</a>
-        </div>
-    </section>
+    <section class="contact-container">
+        <h2>Contact</h2>
 
-    <section class="featured-book">
-        <div class="gradient-container">
-            <h2>Coming Soon</h2>
-            <div class="book-display">
-                <div class="book-cover">
-                    <!-- Placeholder for book cover -->
-                    <div class="placeholder-cover">
-                        <span>Book Cover Coming Soon</span>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+
+                <p>I love hearing from readers! Feel free to reach out with questions, comments, or just to say hello.</p>
+
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <h4>Email</h4>
+                        <p><a href="mailto:author@ebmorrison.com">author@ebmorrison.com</a></p>
+                    </div>
+
+                    <div class="contact-method">
+                        <h4>Social Media</h4>
+                        <p>Connect with me on:</p>
+                        <ul class="social-list">
+                            <li><a href="#" target="_blank">BlueSky</a></li>
+                            <li><a href="#" target="_blank">Goodreads</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-method">
+                        <h4>Newsletter</h4>
+                        <p>For regular updates and exclusive content, <a href="newsletter.html">join my newsletter</a>.</p>
                     </div>
                 </div>
-                <div class="book-info">
-                    <h3>First Novel Title</h3>
-                    <p class="book-description">
-                        A brief description of your upcoming novel. What's it about? What can readers expect?
-                        This is a great place to build anticipation for your first release.
-                    </p>
-                    <p class="release-date">Expected Release: Summer 2025</p>
-                </div>
             </div>
-        </div>
-    </section>
 
-    <section class="newsletter-teaser">
-        <div class="newsletter-content">
-            <h2>Join My Newsletter</h2>
-            <p>Be the first to know about new releases, special offers, and exclusive content.</p>
-            <a href="newsletter.html" class="cta-button">Sign Up</a>
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+
+                <form action="https://formspree.io/f/mdkekzpb" method="post" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
 </main>
 
 <footer>
+    <!-- Same footer as other pages -->
     <div class="social-links">
-        <!-- Add social media icons here when ready -->
         <a href="#" class="social-icon">BlueSky</a>
         <a href="#" class="social-icon">Goodreads</a>
     </div>

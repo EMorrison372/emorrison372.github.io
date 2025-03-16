@@ -286,3 +286,461 @@ footer {
         padding-top: 1.5rem;
     }
 }
+
+/* About Page Styles */
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.about-container h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: var(--dark-purple);
+}
+
+.about-content {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.author-photo {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.dog-photo {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.photo-caption {
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--dark-purple);
+}
+
+.author-bio {
+    flex: 2;
+    min-width: 300px;
+}
+
+.author-bio p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.author-interests {
+    background: linear-gradient(to bottom right, var(--light-pink), var(--millennial-pink));
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.author-interests h3 {
+    color: var(--dark-purple);
+    margin-bottom: 1rem;
+}
+
+.author-interests p {
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .author-photo {
+        margin: 0 auto 2rem;
+    }
+}
+
+/* Books Page Styles */
+.books-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.books-container h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: var(--dark-purple);
+}
+
+.coming-soon {
+    margin-bottom: 4rem;
+}
+
+.coming-soon h3 {
+    color: var(--dark-purple);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.release-date {
+    font-style: italic;
+    margin-bottom: 2rem;
+    color: var(--dark-purple);
+}
+
+.book-preview {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.book-cover {
+    flex: 1;
+    min-width: 250px;
+}
+
+.placeholder-cover {
+    background: linear-gradient(135deg, var(--gen-z-purple), var(--dark-purple));
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-text);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.book-details {
+    flex: 2;
+    min-width: 300px;
+}
+
+.book-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-purple);
+}
+
+.book-subtitle {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.book-description p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.book-info {
+    margin-top: 2rem;
+    background: linear-gradient(to right, var(--light-pink), var(--millennial-pink));
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.book-info p {
+    margin-bottom: 0.5rem;
+}
+
+.future-works {
+    background: rgba(176, 136, 249, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.future-works h3 {
+    color: var(--dark-purple);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.projects-list {
+    margin: 1rem 0 1rem 2rem;
+    line-height: 1.7;
+}
+
+.projects-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .book-preview {
+        flex-direction: column;
+    }
+
+    .placeholder-cover {
+        height: 350px;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Newsletter Page Styles */
+.newsletter-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.newsletter-container h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: var(--dark-purple);
+}
+
+.newsletter-content {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.newsletter-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.newsletter-info h3 {
+    color: var(--dark-purple);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.newsletter-benefits {
+    margin: 1rem 0 1.5rem 1.5rem;
+    line-height: 1.7;
+}
+
+.newsletter-benefits li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.newsletter-benefits li::before {
+    content: "•";
+    color: var(--gen-z-purple);
+    font-weight: bold;
+    position: absolute;
+    left: -1.5rem;
+}
+
+.signup-form {
+    flex: 1;
+    min-width: 300px;
+    background: linear-gradient(to bottom right, var(--light-pink), var(--millennial-pink));
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(176,136,249,0.2);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.form-group.consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.form-group.consent input {
+    margin-top: 5px;
+}
+
+.form-group.consent label {
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.signup-button {
+    display: inline-block;
+    background: linear-gradient(to right, var(--gen-z-purple), var(--dark-purple));
+    color: var(--light-text);
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.signup-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.privacy-note {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .newsletter-content {
+        flex-direction: column;
+    }
+}
+
+/* Contact Page Styles */
+.contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.contact-container h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: var(--dark-purple);
+}
+
+.contact-content {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h3 {
+    color: var(--dark-purple);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-methods {
+    margin-top: 2rem;
+}
+
+.contact-method {
+    margin-bottom: 2rem;
+}
+
+.contact-method h4 {
+    color: var(--dark-purple);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.social-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.social-list li {
+    margin-bottom: 0.5rem;
+}
+
+.social-list a {
+    font-weight: 600;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background: linear-gradient(to bottom right, var(--light-pink), var(--millennial-pink));
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(176,136,249,0.2);
+}
+
+.contact-form h3 {
+    color: var(--dark-purple);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    display: inline-block;
+    background: linear-gradient(to right, var(--gen-z-purple), var(--dark-purple));
+    color: var(--light-text);
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+}
+
+.checkbox-wrapper {
+    width: 20px;
+    flex-shrink: 0;
+}
+
+.consent-text {
+    flex-grow: 1;
+}
