@@ -744,3 +744,37 @@ footer {
 .consent-text {
     flex-grow: 1;
 }
+
+/* Privacy Policy Styles */
+.policy-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.policy-container h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: var(--dark-purple);
+}
+
+.policy-content h3 {
+    color: var(--dark-purple);
+    margin: 2rem 0 1rem;
+    font-size: 1.4rem;
+}
+
+.policy-content p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.policy-content ul {
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.policy-content ul li {
+    margin-bottom: 0.5rem;
+}
