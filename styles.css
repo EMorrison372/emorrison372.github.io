@@ -1,0 +1,288 @@
+/* Base Styles */
+:root {
+    --millennial-pink: #F5C2C2;
+    --gen-z-purple: #B088F9;
+    --light-pink: #FDE2E2;
+    --dark-purple: #7D58C9;
+    --off-white: #FAFAFA;
+    --dark-text: #333333;
+    --light-text: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--off-white);
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-purple);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--millennial-pink);
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, var(--millennial-pink), var(--gen-z-purple));
+    padding: 1.5rem 0;
+    color: var(--light-text);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.author-name {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin-left: 1.5rem;
+}
+
+nav a {
+    color: var(--light-text);
+    font-weight: 600;
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--light-pink);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--light-pink);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('img/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-text);
+    text-align: center;
+    padding: 8rem 2rem;
+    position: relative;
+}
+
+/* Add some subtle animation to enhance the dreamy quality */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(245,194,194,0.1), rgba(176,136,249,0.1));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(to right, var(--millennial-pink), var(--gen-z-purple));
+    color: var(--light-text);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    color: var(--light-text);
+}
+
+/* Featured Book Section */
+.featured-book {
+    padding: 5rem 2rem;
+}
+
+.gradient-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom right, var(--light-pink), var(--millennial-pink));
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(176,136,249,0.2);
+}
+
+.featured-book h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+    color: var(--dark-purple);
+}
+
+.book-display {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.book-cover {
+    flex: 1;
+    min-width: 250px;
+}
+
+.placeholder-cover {
+    background: linear-gradient(135deg, var(--gen-z-purple), var(--dark-purple));
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-text);
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.book-info {
+    flex: 2;
+    min-width: 300px;
+}
+
+.book-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--dark-purple);
+}
+
+.book-description {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.release-date {
+    font-style: italic;
+    color: var(--dark-purple);
+}
+
+/* Newsletter Teaser */
+.newsletter-teaser {
+    background-color: var(--gen-z-purple);
+    padding: 4rem 2rem;
+    color: var(--light-text);
+    text-align: center;
+}
+
+.newsletter-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter-teaser h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.newsletter-teaser p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-text);
+    color: var(--light-text);
+    padding: 2rem;
+    text-align: center;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    color: var(--light-text);
+    margin: 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+.social-icon:hover {
+    color: var(--millennial-pink);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    nav li:first-child {
+        margin-left: 0;
+    }
+
+    .book-display {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .book-info {
+        padding-top: 1.5rem;
+    }
+}
