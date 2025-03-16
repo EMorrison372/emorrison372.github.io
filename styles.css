@@ -778,3 +778,9 @@ footer {
 .policy-content ul li {
     margin-bottom: 0.5rem;
 }
+
+.form-note {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    text-align: center;
+}
