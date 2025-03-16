@@ -1,12 +1,17 @@
 /* Base Styles */
 :root {
-    --millennial-pink: #F5C2C2;
-    --gen-z-purple: #B088F9;
-    --light-pink: #FDE2E2;
-    --dark-purple: #7D58C9;
-    --off-white: #FAFAFA;
-    --dark-text: #333333;
-    --light-text: #FFFFFF;
+    /* New England coastal palette */
+    --navy-blue: #1D3557;           /* Deep navy for anchors */
+    --dusty-blue: #8BADC1;          /* Soft weathered blue */
+    --pale-blue: #D6E2E9;           /* Misty morning blue */
+    --soft-cream: #F5F1E8;          /* Warm cream */
+    --antique-white: #F9F8F4;       /* Aged paper white */
+
+    /* Supporting colors */
+    --slate-blue: #5E7B96;          /* Medium blue for accents */
+    --sand-beige: #E5DDCB;          /* Beach sand color */
+    --dark-text: #2C3A47;           /* Deep blue-gray for text */
+    --light-text: #FFFFFF;          /* White text */
 }
 
 * {
@@ -19,26 +24,35 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: var(--dark-text);
-    background-color: var(--off-white);
+    background-color: var(--antique-white);
 }
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+h1 {
+    letter-spacing: 1.5px;
+}
+
+h2, h3 {
+    letter-spacing: 0.8px;
 }
 
 a {
     text-decoration: none;
-    color: var(--dark-purple);
+    color: var(--navy-blue);
     transition: all 0.3s ease;
 }
 
 a:hover {
-    color: var(--millennial-pink);
+    color: var(--dusty-blue);
 }
 
 /* Header Styles */
 header {
-    background: linear-gradient(135deg, var(--millennial-pink), var(--gen-z-purple));
+    background: linear-gradient(135deg, var(--dusty-blue), var(--navy-blue));
     padding: 1.5rem 0;
     color: var(--light-text);
 }
@@ -54,9 +68,12 @@ header {
 }
 
 .author-name {
-    font-size: 2.5rem;
-    letter-spacing: 1px;
+    font-size: 2.7rem;
+    letter-spacing: 2px;
     margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(29, 53, 87, 0.2);
+    font-style: italic;
+    white-space: nowrap; /* Keep on one line */
 }
 
 nav ul {
@@ -76,7 +93,7 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--light-pink);
+    color: var(--pale-blue);
 }
 
 nav a::after {
@@ -86,7 +103,7 @@ nav a::after {
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: var(--light-pink);
+    background-color: var(--pale-blue);
     transition: width 0.3s ease;
 }
 
@@ -96,7 +113,7 @@ nav a:hover::after {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('img/hero-background.jpg');
+    background: linear-gradient(rgba(29, 53, 87, 0.15), rgba(29, 53, 87, 0.15)), url('img/hero-background.jpg');
     background-size: cover;
     background-position: center;
     color: var(--light-text);
@@ -105,7 +122,24 @@ nav a:hover::after {
     position: relative;
 }
 
-/* Add some subtle animation to enhance the dreamy quality */
+/* Add subtle animation for a dreamy quality */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 40%, rgba(139, 173, 193, 0.1), transparent 60%);
+    animation: pulse 15s infinite alternate ease-in-out;
+    z-index: 1;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.8; }
+}
+
 .hero::after {
     content: '';
     position: absolute;
@@ -113,7 +147,7 @@ nav a:hover::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(245,194,194,0.1), rgba(176,136,249,0.1));
+    background: linear-gradient(135deg, rgba(139, 173, 193, 0.1), rgba(29, 53, 87, 0.1));
     z-index: 1;
 }
 
@@ -125,29 +159,32 @@ nav a:hover::after {
 }
 
 .hero h2 {
-    font-size: 2.5rem;
+    font-size: 2.9rem;
     margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    font-style: italic;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     margin-bottom: 2rem;
+    line-height: 1.8;
 }
 
 .cta-button {
     display: inline-block;
-    background: linear-gradient(to right, var(--millennial-pink), var(--gen-z-purple));
+    background: linear-gradient(to right, var(--slate-blue), var(--navy-blue));
     color: var(--light-text);
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 2.2rem;
     border-radius: 50px;
     font-weight: 600;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(29, 53, 87, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 25px rgba(29, 53, 87, 0.5);
     color: var(--light-text);
 }
 
@@ -159,17 +196,18 @@ nav a:hover::after {
 .gradient-container {
     max-width: 1000px;
     margin: 0 auto;
-    background: linear-gradient(to bottom right, var(--light-pink), var(--millennial-pink));
+    background: linear-gradient(to bottom right, var(--pale-blue), var(--soft-cream));
     padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(176,136,249,0.2);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(29, 53, 87, 0.1);
 }
 
 .featured-book h2 {
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 2.2rem;
-    color: var(--dark-purple);
+    font-size: 2.5rem;
+    color: var(--navy-blue);
+    font-style: italic;
 }
 
 .book-display {
@@ -185,14 +223,14 @@ nav a:hover::after {
 }
 
 .placeholder-cover {
-    background: linear-gradient(135deg, var(--gen-z-purple), var(--dark-purple));
+    background: linear-gradient(135deg, var(--dusty-blue), var(--navy-blue));
     height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--light-text);
-    border-radius: 10px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(29, 53, 87, 0.25);
 }
 
 .book-info {
@@ -201,47 +239,52 @@ nav a:hover::after {
 }
 
 .book-info h3 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     margin-bottom: 1rem;
-    color: var(--dark-purple);
+    color: var(--navy-blue);
+    font-style: italic;
 }
 
 .book-description {
     margin-bottom: 1.5rem;
-    font-size: 1.1rem;
+    font-size: 1.12rem;
+    line-height: 1.9;
 }
 
 .release-date {
     font-style: italic;
-    color: var(--dark-purple);
+    color: var(--navy-blue);
 }
 
 /* Newsletter Teaser */
 .newsletter-teaser {
-    background-color: var(--gen-z-purple);
+    background-color: var(--slate-blue);
     padding: 4rem 2rem;
     color: var(--light-text);
     text-align: center;
 }
 
 .newsletter-content {
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
 }
 
 .newsletter-teaser h2 {
-    margin-bottom: 1rem;
-    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    font-size: 2.3rem;
+    color: var(--light-text);
+    font-style: italic;
 }
 
 .newsletter-teaser p {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
+    margin-bottom: 1.8rem;
+    font-size: 1.15rem;
+    line-height: 1.8;
 }
 
 /* Footer */
 footer {
-    background-color: var(--dark-text);
+    background-color: var(--navy-blue);
     color: var(--light-text);
     padding: 2rem;
     text-align: center;
@@ -255,10 +298,11 @@ footer {
     color: var(--light-text);
     margin: 0 0.5rem;
     font-size: 1.1rem;
+    transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-    color: var(--millennial-pink);
+    color: var(--dusty-blue);
 }
 
 /* Responsive Adjustments */
@@ -292,13 +336,17 @@ footer {
     max-width: 1000px;
     margin: 0 auto;
     padding: 4rem 2rem;
+    background-color: var(--soft-cream);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(29, 53, 87, 0.1);
 }
 
 .about-container h2 {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--dark-purple);
+    color: var(--navy-blue);
+    font-style: italic;
 }
 
 .about-content {
@@ -317,14 +365,14 @@ footer {
 .dog-photo {
     width: 100%;
     max-width: 350px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(29, 53, 87, 0.25);
 }
 
 .photo-caption {
     margin-top: 1rem;
     font-style: italic;
-    color: var(--dark-purple);
+    color: var(--navy-blue);
 }
 
 .author-bio {
@@ -334,20 +382,22 @@ footer {
 
 .author-bio p {
     margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1.12rem;
+    line-height: 1.9;
 }
 
 .author-interests {
-    background: linear-gradient(to bottom right, var(--light-pink), var(--millennial-pink));
+    background: linear-gradient(to bottom right, var(--pale-blue), var(--soft-cream));
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 16px;
     margin-top: 2rem;
+    box-shadow: 0 8px 20px rgba(29, 53, 87, 0.1);
 }
 
 .author-interests h3 {
-    color: var(--dark-purple);
+    color: var(--navy-blue);
     margin-bottom: 1rem;
+    font-style: italic;
 }
 
 .author-interests p {
@@ -370,13 +420,17 @@ footer {
     max-width: 1000px;
     margin: 0 auto;
     padding: 4rem 2rem;
+    background-color: var(--soft-cream);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(29, 53, 87, 0.1);
 }
 
 .books-container h2 {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--dark-purple);
+    color: var(--navy-blue);
+    font-style: italic;
 }
 
 .coming-soon {
@@ -384,15 +438,16 @@ footer {
 }
 
 .coming-soon h3 {
-    color: var(--dark-purple);
-    font-size: 1.8rem;
+    color: var(--navy-blue);
+    font-size: 1.9rem;
     margin-bottom: 0.5rem;
+    font-style: italic;
 }
 
 .release-date {
     font-style: italic;
     margin-bottom: 2rem;
-    color: var(--dark-purple);
+    color: var(--navy-blue);
 }
 
 .book-preview {
@@ -407,7 +462,7 @@ footer {
 }
 
 .placeholder-cover {
-    background: linear-gradient(135deg, var(--gen-z-purple), var(--dark-purple));
+    background: linear-gradient(135deg, var(--dusty-blue), var(--navy-blue));
     height: 400px;
     display: flex;
     align-items: center;
@@ -415,8 +470,8 @@ footer {
     color: var(--light-text);
     text-align: center;
     padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(29, 53, 87, 0.25);
 }
 
 .book-details {
@@ -425,9 +480,10 @@ footer {
 }
 
 .book-title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
-    color: var(--dark-purple);
+    color: var(--navy-blue);
+    font-style: italic;
 }
 
 .book-subtitle {
@@ -437,14 +493,16 @@ footer {
 
 .book-description p {
     margin-bottom: 1rem;
-    line-height: 1.7;
+    line-height: 1.9;
+    font-size: 1.12rem;
 }
 
 .book-info {
     margin-top: 2rem;
-    background: linear-gradient(to right, var(--light-pink), var(--millennial-pink));
+    background: linear-gradient(to right, var(--pale-blue), var(--soft-cream));
     padding: 1.5rem;
-    border-radius: 10px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(29, 53, 87, 0.1);
 }
 
 .book-info p {
@@ -452,15 +510,17 @@ footer {
 }
 
 .future-works {
-    background: rgba(176, 136, 249, 0.1);
+    background: rgba(139, 173, 193, 0.15);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(29, 53, 87, 0.1);
 }
 
 .future-works h3 {
-    color: var(--dark-purple);
+    color: var(--navy-blue);
     font-size: 1.8rem;
     margin-bottom: 1rem;
+    font-style: italic;
 }
 
 .projects-list {
@@ -489,13 +549,17 @@ footer {
     max-width: 1000px;
     margin: 0 auto;
     padding: 4rem 2rem;
+    background-color: var(--soft-cream);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(29, 53, 87, 0.1);
 }
 
 .newsletter-container h2 {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--dark-purple);
+    color: var(--navy-blue);
+    font-style: italic;
 }
 
 .newsletter-content {
@@ -510,14 +574,15 @@ footer {
 }
 
 .newsletter-info h3 {
-    color: var(--dark-purple);
-    font-size: 1.8rem;
+    color: var(--navy-blue);
+    font-size: 1.9rem;
     margin-bottom: 1.5rem;
+    font-style: italic;
 }
 
 .newsletter-benefits {
     margin: 1rem 0 1.5rem 1.5rem;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 .newsletter-benefits li {
@@ -527,7 +592,7 @@ footer {
 
 .newsletter-benefits li::before {
     content: "•";
-    color: var(--gen-z-purple);
+    color: var(--dusty-blue);
     font-weight: bold;
     position: absolute;
     left: -1.5rem;
@@ -536,10 +601,10 @@ footer {
 .signup-form {
     flex: 1;
     min-width: 300px;
-    background: linear-gradient(to bottom right, var(--light-pink), var(--millennial-pink));
+    background: linear-gradient(to bottom right, var(--pale-blue), var(--soft-cream));
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(176,136,249,0.2);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(29, 53, 87, 0.2);
 }
 
 .form-group {
@@ -550,14 +615,15 @@ footer {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
+    color: var(--dark-text);
 }
 
 .form-group input[type="text"],
 .form-group input[type="email"] {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid rgba(0,0,0,0.1);
-    border-radius: 5px;
+    border: 1px solid rgba(29, 53, 87, 0.2);
+    border-radius: 8px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
 }
@@ -570,17 +636,22 @@ footer {
 
 .form-group.consent input {
     margin-top: 5px;
+    flex-shrink: 0;
+    width: auto;
 }
 
 .form-group.consent label {
     font-weight: 400;
     font-size: 0.9rem;
     line-height: 1.4;
+    display: inline;
+    text-align: left;
+    margin-top: 3px;
 }
 
 .signup-button {
     display: inline-block;
-    background: linear-gradient(to right, var(--gen-z-purple), var(--dark-purple));
+    background: linear-gradient(to right, var(--dusty-blue), var(--navy-blue));
     color: var(--light-text);
     padding: 0.8rem 2rem;
     border: none;
@@ -589,13 +660,13 @@ footer {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(29, 53, 87, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .signup-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 25px rgba(29, 53, 87, 0.5);
 }
 
 .privacy-note {
@@ -616,13 +687,17 @@ footer {
     max-width: 1000px;
     margin: 0 auto;
     padding: 4rem 2rem;
+    background-color: var(--soft-cream);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(29, 53, 87, 0.1);
 }
 
 .contact-container h2 {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--dark-purple);
+    color: var(--navy-blue);
+    font-style: italic;
 }
 
 .contact-content {
@@ -637,9 +712,10 @@ footer {
 }
 
 .contact-info h3 {
-    color: var(--dark-purple);
-    font-size: 1.8rem;
+    color: var(--navy-blue);
+    font-size: 1.9rem;
     margin-bottom: 1.5rem;
+    font-style: italic;
 }
 
 .contact-methods {
@@ -651,10 +727,11 @@ footer {
 }
 
 .contact-method h4 {
-    color: var(--dark-purple);
-    font-size: 1.3rem;
+    color: var(--navy-blue);
+    font-size: 1.4rem;
     margin-bottom: 0.5rem;
     font-family: 'Playfair Display', serif;
+    font-style: italic;
 }
 
 .social-list {
@@ -673,16 +750,17 @@ footer {
 .contact-form {
     flex: 1;
     min-width: 300px;
-    background: linear-gradient(to bottom right, var(--light-pink), var(--millennial-pink));
+    background: linear-gradient(to bottom right, var(--pale-blue), var(--soft-cream));
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(176,136,249,0.2);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(29, 53, 87, 0.2);
 }
 
 .contact-form h3 {
-    color: var(--dark-purple);
-    font-size: 1.8rem;
+    color: var(--navy-blue);
+    font-size: 1.9rem;
     margin-bottom: 1.5rem;
+    font-style: italic;
 }
 
 .form-group {
@@ -693,14 +771,15 @@ footer {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
+    color: var(--dark-text);
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid rgba(0,0,0,0.1);
-    border-radius: 5px;
+    border: 1px solid rgba(29, 53, 87, 0.2);
+    border-radius: 8px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
 }
@@ -711,7 +790,7 @@ footer {
 
 .submit-button {
     display: inline-block;
-    background: linear-gradient(to right, var(--gen-z-purple), var(--dark-purple));
+    background: linear-gradient(to right, var(--dusty-blue), var(--navy-blue));
     color: var(--light-text);
     padding: 0.8rem 2rem;
     border: none;
@@ -720,13 +799,13 @@ footer {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(29, 53, 87, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .submit-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 25px rgba(29, 53, 87, 0.5);
 }
 
 /* Responsive adjustments */
@@ -750,24 +829,29 @@ footer {
     max-width: 800px;
     margin: 0 auto;
     padding: 4rem 2rem;
+    background-color: var(--soft-cream);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(29, 53, 87, 0.1);
 }
 
 .policy-container h2 {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--dark-purple);
+    color: var(--navy-blue);
+    font-style: italic;
 }
 
 .policy-content h3 {
-    color: var(--dark-purple);
+    color: var(--navy-blue);
     margin: 2rem 0 1rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    font-style: italic;
 }
 
 .policy-content p {
     margin-bottom: 1rem;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 .policy-content ul {
