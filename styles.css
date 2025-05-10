@@ -940,3 +940,133 @@ header .author-name {
     font-style: italic !important;
     font-weight: 400 !important;
 }
+
+/* Add these updated styles to your styles.css file */
+
+/* Update the main padding-top to account for the header height */
+body {
+    padding-top: 120px; /* Increased from 80px to account for mobile header height */
+}
+
+/* Add proper padding to all main container sections */
+.about-container,
+.books-container,
+.newsletter-container,
+.contact-container,
+.policy-container {
+    margin-top: 2rem; /* Add some space between header and container */
+    padding-top: 2rem; /* Increase top padding */
+}
+
+/* Adjust header for mobile */
+@media (max-width: 768px) {
+    body {
+        padding-top: 160px; /* Even more padding for mobile due to stacked header elements */
+    }
+
+    .header-container {
+        padding: 1rem;
+    }
+
+    .author-name {
+        font-size: 2.2rem; /* Slightly smaller font size on mobile */
+        margin-bottom: 0.8rem;
+    }
+
+    /* Add more space to containers on mobile */
+    .about-container,
+    .books-container,
+    .newsletter-container,
+    .contact-container,
+    .policy-container {
+        margin-top: 1rem;
+        padding: 2rem 1.5rem; /* Adjusted side padding too */
+    }
+
+    /* Adjust section titles to ensure they're visible */
+    .about-container h2,
+    .books-container h2,
+    .newsletter-container h2,
+    .contact-container h2,
+    .policy-container h2 {
+        margin-top: 0.5rem;
+    }
+}
+
+/* Add this to your styles.css file */
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin-left: 1.5rem;
+}
+
+/* Unique hover colors for each nav item */
+nav li:nth-child(1) a:hover {
+    color: #FF8BA0; /* Pink */
+}
+
+nav li:nth-child(2) a:hover {
+    color: #FFD166; /* Yellow */
+}
+
+nav li:nth-child(3) a:hover {
+    color: #A0E8AF; /* Mint green */
+}
+
+nav li:nth-child(4) a:hover {
+    color: #BDB2FF; /* Lavender */
+}
+
+nav li:nth-child(5) a:hover {
+    color: #9CF6FB; /* Aqua */
+}
+
+/* Update the underline to match the hover color */
+nav li:nth-child(1) a:hover::after {
+    background-color: #FF8BA0;
+}
+
+nav li:nth-child(2) a:hover::after {
+    background-color: #FFD166;
+}
+
+nav li:nth-child(3) a:hover::after {
+    background-color: #A0E8AF;
+}
+
+nav li:nth-child(4) a:hover::after {
+    background-color: #BDB2FF;
+}
+
+nav li:nth-child(5) a:hover::after {
+    background-color: #9CF6FB;
+}
+
+/* Social Media Links with Icons */
+<style>
+ .social-links {
+     display: flex;
+     justify-content: center;
+     gap: 1.5rem;
+     margin-bottom: 1rem;
+ }
+
+.social-icon {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: var(--dusty-blue);
+}
+
+.bsky-icon, .goodreads-icon {
+    width: 24px;
+    height: 24px;
+}
+</style>
