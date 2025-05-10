@@ -78,6 +78,16 @@
         </a>
     </div>
     <p>&copy; 2025 E.B. Morrison. All rights reserved. <a href="privacy-policy.html">Privacy Policy</a></p>
+
+    <!-- Page Counter -->
+    <script>
+        let visits = localStorage.getItem("pageViews") || 0;
+        visits++;
+        localStorage.setItem("pageViews", visits);
+        document.getElementById("visit-count").textContent =
+            `You’ve visited this page ${visits} time${visits == 1 ? '' : 's'}.`;
+    </script>
+
 </footer>
 </body>
 </html>
