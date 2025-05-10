@@ -79,24 +79,6 @@
     <p>&copy; 2025 E.B. Morrison. All rights reserved. <a href="privacy-policy.html">Privacy Policy</a></p>
     <div id="visit-count"></div>
 
-    <!-- Book List -->
-    <h2>My Books</h2>
-    <ul id="book-list"></ul>
-
-    <script>
-        fetch("books.txt")
-            .then(response => response.text())
-            .then(text => {
-                const lines = text.trim().split("\n");
-                const list = document.getElementById("book-list");
-                lines.forEach(book => {
-                    const li = document.createElement("li");
-                    li.textContent = book;
-                    list.appendChild(li);
-                });
-            });
-    </script>
-
     <!-- Page Counter -->
     <script>
         let visits = localStorage.getItem("pageViews") || 0;
