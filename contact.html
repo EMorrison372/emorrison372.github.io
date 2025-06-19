@@ -3,136 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | E.B. Morrison | Romance Author</title>
+    <title>Contact e.b. morrison - Author</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-- Header -->
 <header>
-    <div class="header-container">
-        <h1 class="author-name">E.B. Morrison</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="books.html">books</a></li>
-                <li><a href="newsletter.html">newsletter</a></li>
-                <li><a href="contact.html">contact</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav>
+        <div class="logo">e.b. morrison</div>
+        <ul class="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="bio.html">bio</a></li>
+            <li><a href="books.html">books</a></li>
+            <li><a href="newsletter.html">newsletter</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="PATREON_LINK_PLACEHOLDER" target="_blank">bonus content</a></li>
+            <li><a href="shop.html">shop</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 </header>
 
+<!-- Main Content -->
 <main>
-    <section class="contact-container">
-        <div class="contact-content">
-            <div class="contact-info">
-                <h3>get in touch</h3>
+    <h1>Get in Touch</h1>
+    <div class="contact-form">
+        <p>I'd love to hear from you! Whether you have questions, want to share your thoughts about my books, or just want to say hello, don't hesitate to reach out.</p>
 
-                <p>I love hearing from readers! Feel free to reach out with questions, comments, or just to say hello.</p>
-
-                <div class="contact-methods">
-                    <div class="contact-method">
-                        <h4>email</h4>
-                        <p><a href="mailto:author@ebmorrison.com">author@ebmorrison.com</a></p>
-                    </div>
-
-                    <div class="contact-method">
-                        <h4>social media</h4>
-                        <p>connect with me on:</p>
-                        <ul class="social-list">
-                            <li><a href="https://bsky.app/profile/ebmorrison" target="_blank">BlueSky</a></li>
-                            <li><a href="https://www.goodreads.com/user/show/ebmorrison" target="_blank">Goodreads</a></li>
-                            <li><a href="https://ebmorrison.com/index.html" target="_blank">TikTok [NEED TO UPDATE LINK]</a></li>
-                            <li><a href="https://ebmorrison.com/index.html" target="_blank">Instagram [NEED TO UPDATE LINK]</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="contact-method">
-                        <h4>newsletter</h4>
-                        <p>for regular updates and exclusive content, <a href="newsletter.html">join my newsletter</a></p>
-                    </div>
-                </div>
+        <!-- Formspree form -->
+        <form action="YOUR_FORMSPREE_ENDPOINT_HERE" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
             </div>
 
-            <div class="contact-form">
-                <h3>send a message</h3>
-                <!--<form action="http://emorrison372.free.nf/process.php" method="GET">
-                    <div>
-                        <label for="name">name</label>
-                        <input type="text" id="name" name="name">
-                    </div>
-
-                    <div>
-                        <label for="email">email</label>
-                        <input type="email" id="email" name="email">
-                    </div>
-
-                    <div>
-                        <label for="subject">subject</label>
-                        <input type="text" id="subject" name="subject">
-                    </div>
-
-                    <div>
-                        <label for="message">message</label>
-                        <input type="text" id="message" name="message">
-                    </div>
-
-                    <div>
-                        <input type="submit" value="submit">
-                    </div>-->
-
-                <!--<form action="https://formspree.io/f/mdkekzpb" method="post" id="contact-form">-->
-                <form action="http://emorrison372.free.nf/contact.php" method="post" id="contact-form">
-                    <div class="form-group">
-                        <label for="name">name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">subject</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-button">send message</button>
-
-                    <p class="form-note">by submitting this form, you agree to my <a href="privacy-policy.html">privacy policy</a></p>
-                </form>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
             </div>
-        </div>
-    </section>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
 </main>
 
-<footer>
-    <div class="social-links">
-        <a href="https://ebmorrison.bsky.social" class="social-icon" target="_blank">Bluesky</a>
-        <a href="https://www.goodreads.com/ebmorrison" class="social-icon" target="_blank">Goodreads</a>
+<!-- Newsletter Popup -->
+<div class="newsletter-popup" id="newsletterPopup">
+    <div class="popup-content">
+        <button class="close-popup" onclick="closeNewsletterPopup()">&times;</button>
+        <h2>Join e.b.'s love letter</h2>
+        <p>Get exclusive updates, behind-the-scenes content, and early access to new releases!</p>
+
+        <!-- MailerLite integration placeholder for popup -->
+        <div style="border: 2px dashed rgba(255,255,255,0.3); padding: 1rem; margin: 1rem 0;">
+            <p><strong>MailerLite Integration Placeholder</strong></p>
+            <p>Paste your MailerLite embed code here for the popup signup form.</p>
+        </div>
     </div>
+</div>
 
-    <p>&copy; 2025 E.B. Morrison. All rights reserved. <a href="privacy-policy.html">Privacy Policy</a></p>
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="social-links">
+            <a href="TIKTOK_LINK_PLACEHOLDER" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="INSTAGRAM_LINK_PLACEHOLDER" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="GOODREADS_LINK_PLACEHOLDER" target="_blank" title="Goodreads"><i class="fab fa-goodreads"></i></a>
+            <a href="BLUESKY_LINK_PLACEHOLDER" target="_blank" title="Bluesky"><i class="fas fa-cloud"></i></a>
+        </div>
 
-    <!-- Page Counter -->
-    <div id="visit-count"></div>
-    <script>
-        let visits = localStorage.getItem("pageViews") || 0;
-        visits++;
-        localStorage.setItem("pageViews", visits);
-        document.getElementById("visit-count").textContent =
-            `You’ve visited this page ${visits} time${visits == 1 ? '' : 's'}.`;
-    </script>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
 
+        <div class="copyright">
+            © 2025 Ethony Media. All rights reserved.
+        </div>
+    </div>
 </footer>
+
+<script src="script.js"></script>
 </body>
 </html>

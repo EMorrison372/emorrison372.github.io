@@ -3,100 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books by E.B. Morrison | Romance Author</title>
+    <title>Books by e.b. morrison - Author</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-- Header -->
 <header>
-    <div class="header-container">
-        <h1 class="author-name">E.B. Morrison</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="books.html">books</a></li>
-                <li><a href="newsletter.html">newsletter</a></li>
-                <li><a href="contact.html">contact</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav>
+        <div class="logo">e.b. morrison</div>
+        <ul class="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="bio.html">bio</a></li>
+            <li><a href="books.html">books</a></li>
+            <li><a href="newsletter.html">newsletter</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="PATREON_LINK_PLACEHOLDER" target="_blank">bonus content</a></li>
+            <li><a href="shop.html">shop</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 </header>
 
+<!-- Main Content -->
 <main>
-    <section class="books-container">
-        <h2>books</h2>
+    <h1>My Books</h1>
 
-        <div class="coming-soon">
-            <h3>coming soon</h3>
-            <p class="release-date">autumn 2025</p>
+    <div class="book-series">
+        <h2>[Series Name Placeholder]</h2>
 
-            <div class="book-preview">
-                <div class="book-cover">
-                    <!-- Replace with actual cover when available -->
-                    <div class="placeholder-cover">
-                        <span>cover reveal coming soon</span>
-                    </div>
-                </div>
-
+        <div class="book-item" id="book1">
+            <div class="book-cover">
+                <span>Book Cover Placeholder</span>
+            </div>
+            <div class="book-info">
+                <h3>[Book Title Placeholder]</h3>
                 <div class="book-details">
-                    <h4 class="book-title">Pumpkin Grove 1 (Working Title)</h4>
-                    <p class="book-subtitle">First Novel in the <strong>Pumpkin Grove</strong> Series</p>
+                    <span>Release Date: [Date]</span>
+                    <span>Heat Level: 🌶️🌶️🌶️</span>
+                </div>
+                <div class="book-summary">
+                    <p>This is where your book summary will go. Describe the plot, the main characters, the central conflict, and what makes this story special. Give readers a taste of the passion, emotion, and journey they'll experience when they pick up your book.</p>
 
-                    <div class="book-description">
-                        <p>My debut novel, <strong>Pumpkin Grove 1</strong>, is currently in development and expected to release in Autumn 2025.</p>
-
-                        <p>Summary TBD</p>
-
-                        <p>Follow my <a href="newsletter.html">newsletter</a> for exclusive updates, including cover reveals, character introductions, and pre-order information.</p>
-                    </div>
-
-                    <div class="book-info">
-                        <p><strong>Genre:</strong> contemporary mm romance</p>
-                        <p><strong>Expected Release:</strong> autumn 2025</p>
-                        <p><strong>Length:</strong> full-length novel</p>
-                        <!--<p><strong>Heat Level:</strong> 🔥🔥🔥🔥</p>-->
-                    </div>
+                    <p>Include any content warnings, tropes, or special features that readers should know about. Make it compelling and engaging!</p>
                 </div>
             </div>
         </div>
 
-        <div class="future-works">
-            <h3>future projects</h3>
-            <p>I'm developing several exciting romance stories, including:</p>
+        <div class="book-item" id="book2">
+            <div class="book-cover">
+                <span>Book Cover Placeholder 2</span>
+            </div>
+            <div class="book-info">
+                <h3>[Book Title 2 Placeholder]</h3>
+                <div class="book-details">
+                    <span>Release Date: [Date 2]</span>
+                    <span>Heat Level: 🌶️🌶️🌶️🌶️</span>
+                </div>
+                <div class="book-summary">
+                    <p>Here's where the second book's compelling summary goes. Paint a picture of the romance, the emotional journey, and the unforgettable characters that readers will fall in love with. What makes this story unique and irresistible?</p>
 
-            <ul class="projects-list">
-                <li>A continuation of the <strong>Pumpkin Grove</strong> series, following other romances within the Pumpkin Grove world.</li>
-                <li>A holiday romance novella series, <strong>Pinecrest Lodge</strong>—full of charm, heart, and festive longing.</li>
-                <li>A romcom trilogy: <strong>One Way Ticket</strong>, <strong>Round Trip Ticket</strong>, and <strong>Missed Connection</strong>—witty, addictive, and filled with twists.</li>
-                <!--<li>A new serialized, soap opera–style, ensemble romance—dramatic, addictive, and filled with twists, betrayals, and slow-burn tension.</li>-->
-            </ul>
-
-            <p>Sign up for my <a href="newsletter.html">newsletter</a> to be the first to hear about new projects and release dates.</p>
+                    <p>Mention any tropes, content considerations, or special elements that will help readers decide if this book is perfect for them. Build anticipation and excitement!</p>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 </main>
 
-<footer>
-    <div class="social-links">
-        <a href="https://ebmorrison.bsky.social" class="social-icon" target="_blank">Bluesky</a>
-        <a href="https://www.goodreads.com/ebmorrison" class="social-icon" target="_blank">Goodreads</a>
-    </div>
-
-    <p>&copy; 2025 E.B. Morrison. All rights reserved. <a href="privacy-policy.html">Privacy Policy</a></p>
-
-    <!-- Page Counter -->
-    <div id="visit-count"></div>
-    <script>
-        let visits = localStorage.getItem("pageViews") || 0;
-        visits++;
-        localStorage.setItem("pageViews", visits);
-        document.getElementById("visit-count").textContent =
-            `You’ve visited this page ${visits} time${visits == 1 ? '' : 's'}.`;
-    </script>
-
-</footer>
-</body>
-</html>
+<!-- Newsletter Popup -->
+<div class="newsletter-popup" id="newsletterPopup">
+    <div class="popup-content">
+        <button class="close-popup" onclick="closeNewsletterPopup()">&times;</button>
+        <h2
