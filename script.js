@@ -50,32 +50,83 @@ if (quotes.length > 0) {
     quoteInterval = setInterval(showNextQuote, 6000);
 }
 
-// Mobile menu toggle
+// Mobile menu toggle with hamburger to X animation
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
+    const menuToggle = document.querySelector('.menu-toggle');
+
     navLinks.classList.toggle('active');
+    menuToggle.classList.toggle('active');
 }
 
-// Newsletter popup functions
-function showNewsletterPopup() {
-    const popup = document.getElementById('newsletterPopup');
-    if (popup) {
-        popup.style.display = 'flex';
+// Image zoom functionality for book covers
+let currentZoomImage = 0;
+let currentBookId = '';
+
+function openImageZoom(imageId) {
+    const modal = document.getElementById('imageZoomModal');
+    const container = document.getElementById('zoomImageContainer');
+
+    if (modal && container) {
+        currentBookId = imageId;
+        currentZoomImage = 0;
+        showZoomImage();
+        modal.style.display = 'flex';
     }
 }
 
-function closeNewsletterPopup() {
-    const popup = document.getElementById('newsletterPopup');
-    if (popup) {
-        popup.style.display = 'none';
+function showZoomImage() {
+    const container = document.getElementById('zoomImageContainer');
+    const indicator = document.getElementById('zoomIndicator');
+
+    if (container && indicator) {
+        // For now, show placeholder since no actual images are uploaded yet
+        // **When you add real book covers:**
+        // Replace the placeholder functionality in script.js with:
+        //
+        // const img = document.createElement('img');
+        // img.src = currentZoomImage === 0 ? 'path/to/front-cover.jpg' : 'path/to/back-cover.jpg';
+        // img.className = 'zoom-image';
+        // img.alt = currentZoomImage === 0 ? 'Front Cover' : 'Back Cover';
+
+        const placeholder = document.createElement('div');
+        placeholder.className = 'zoom-placeholder';
+        const coverType = currentZoomImage === 0 ? 'Front' : 'Back';
+        placeholder.innerHTML = `<span>Enlarged Book Cover<br/>${coverType} Cover Preview<br/><br/>(Replace with actual book cover image)</span>`;
+
+        container.innerHTML = '';
+        container.appendChild(placeholder);
+
+        indicator.textContent = `${coverType} Cover`;
+    }
+}
+
+function prevZoomImage(event) {
+    event.stopPropagation();
+    currentZoomImage = currentZoomImage === 0 ? 1 : 0;
+    showZoomImage();
+}
+
+function nextZoomImage(event) {
+    event.stopPropagation();
+    currentZoomImage = currentZoomImage === 0 ? 1 : 0;
+    showZoomImage();
+}
+
+function closeImageZoom() {
+    const modal = document.getElementById('imageZoomModal');
+    if (modal) {
+        modal.style.display = 'none';
+        currentZoomImage = 0;
+        currentBookId = '';
     }
 }
 
 // Close popup when clicking outside
 window.onclick = function(event) {
-    const popup = document.getElementById('newsletterPopup');
-    if (event.target === popup) {
-        closeNewsletterPopup();
+    const imageModal = document.getElementById('imageZoomModal');
+    if (event.target === imageModal) {
+        closeImageZoom();
     }
 }
 

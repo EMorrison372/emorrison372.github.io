@@ -33,15 +33,28 @@ nav {
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-family: 'Futura', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 2.5rem;
     font-weight: bold;
     letter-spacing: 0.5px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: rainbow 2s ease infinite;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .nav-links a {
@@ -49,7 +62,8 @@ nav {
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
+    font-size: 1.2rem;
 }
 
 /* Rainbow hover effect */
@@ -73,6 +87,7 @@ nav {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    padding: 0.5rem; /* Add some padding for easier clicking */
 }
 
 .menu-toggle span {
@@ -81,11 +96,25 @@ nav {
     background: white;
     margin: 3px 0;
     transition: 0.3s;
+    transform-origin: center;
+}
+
+/* Hamburger to X animation */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* Main content */
 main {
-    margin-top: 80px;
+    margin-top: 120px; /* Increased to prevent overlap */
     min-height: calc(100vh - 160px);
     max-width: 1200px;
     margin-left: auto;
@@ -109,21 +138,24 @@ main h2 {
 .hero {
     text-align: center;
     padding: 4rem 0;
+    margin-top: -40px; /* Adjust to compensate for main margin */
 }
 
-.hero h1 {
-    font-size: 3.5rem;
+.hero h1.page-title {
+    font-size: 2.5rem; /* Match logo size */
     margin-bottom: 2rem;
-    background: linear-gradient(45deg, #ffffff, #e1bee7, #ce93d8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: white !important;
+    background: none !important;
+    background-image: none !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: white !important;
+    background-clip: initial !important;
 }
 
 /* Quote Carousel Styles */
 .quote-carousel {
     margin: 2rem 0;
-    height: 80px;
+    height: 80px; /* Adjusted for header-sized text */
     position: relative;
     overflow: hidden;
 }
@@ -132,13 +164,15 @@ main h2 {
     position: absolute;
     width: 100%;
     transition: transform 0.8s ease-in-out;
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Match header nav links */
     font-style: italic;
-    color: #e1bee7;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
+    text-align: center;
+    padding: 0 1rem;
 }
 
 .quote.active {
@@ -163,19 +197,27 @@ main h2 {
 }
 
 .book-thumbnail {
-    cursor: pointer;
     transition: all 0.3s ease;
-    text-decoration: none;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
 }
 
 .book-thumbnail:hover {
     transform: translateY(-5px) scale(1.05);
 }
 
+.book-thumbnail a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
 .book-thumb-cover {
-    width: 150px;
-    height: 225px;
+    width: 300px;
+    height: 450px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     display: flex;
@@ -195,6 +237,7 @@ main h2 {
     text-align: center;
     font-size: 0.9rem;
     font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
 .cta-button {
@@ -207,6 +250,7 @@ main h2 {
     border: 2px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
     font-weight: bold;
+    font-size: 1rem; /* Ensure consistent font size */
 }
 
 .cta-button:hover {
@@ -220,7 +264,7 @@ main h2 {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 3rem;
-    align-items: start;
+    align-items: center;
 }
 
 .bio-photo {
@@ -233,14 +277,66 @@ main h2 {
     align-items: center;
     justify-content: center;
     border: 2px dashed rgba(255, 255, 255, 0.3);
+    margin: 0 auto;
 }
 
 .bio-text {
     font-size: 1.1rem;
     line-height: 1.8;
+    text-align: left;
 }
 
 /* Books page styles */
+.spice-legend {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.spice-legend h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #e1bee7;
+}
+
+.spice-levels {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.spice-level {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.spice-level:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+.spice-rating {
+    font-size: 1.1rem;
+    min-width: 120px;
+    text-align: left;
+}
+
+.spice-description {
+    font-style: italic;
+    color: #ffffff;
+    text-align: right;
+    flex-grow: 1;
+}
+
 .book-series {
     margin-bottom: 3rem;
 }
@@ -272,6 +368,116 @@ main h2 {
     align-items: center;
     justify-content: center;
     border: 2px dashed rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.book-cover:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.05);
+}
+
+/* Image zoom modal */
+.image-zoom-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    cursor: pointer;
+}
+
+.zoom-content {
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zoom-image {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.zoom-placeholder {
+    width: 400px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.close-zoom {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+}
+
+.close-zoom:hover {
+    color: #8b0000;
+}
+
+.zoom-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.zoom-nav:hover {
+    background: rgba(139, 0, 0, 0.8);
+    color: white;
+}
+
+.zoom-nav-prev {
+    left: -60px;
+}
+
+.zoom-nav-next {
+    right: -60px;
+}
+
+.zoom-indicator {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 0.9rem;
+}
+
+.book-info {
+    text-align: left;
 }
 
 .book-info h3 {
@@ -298,6 +504,27 @@ main h2 {
     font-size: 1rem;
     line-height: 1.6;
     opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.buy-now-btn {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+    font-size: 1rem; /* Ensure consistent font size */
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.buy-now-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Newsletter styles */
@@ -364,6 +591,7 @@ main h2 {
     cursor: pointer;
     font-family: inherit;
     font-weight: bold;
+    font-size: 1rem; /* Match other buttons */
     transition: all 0.3s ease;
 }
 
@@ -417,6 +645,39 @@ main h2 {
     color: white;
     background: none;
     border: none;
+}
+
+/* Links page styles */
+.links-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.links-grid {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.link-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.link-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
 }
 
 /* Footer */
@@ -511,7 +772,7 @@ footer {
         width: 100%;
         background: #4a148c;
         flex-direction: column;
-        padding: 1rem 0;
+        padding: 0; /* Removed padding */
         gap: 0;
     }
 
@@ -520,15 +781,19 @@ footer {
     }
 
     .nav-links a {
-        padding: 1rem 2rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1.5rem 2rem;
+        display: block; /* Ensure full block display */
+        width: 100%; /* Full width clickable area */
+        text-align: left; /* Align text to left */
+        line-height: 1.2; /* Consistent line height */
+        /* Removed border-bottom line */
     }
 
     .menu-toggle {
         display: flex;
     }
 
-    .hero h1 {
+    .hero .page-title {
         font-size: 2.5rem;
     }
 
@@ -546,6 +811,26 @@ footer {
         text-align: center;
     }
 
+    .book-item .book-info {
+        text-align: center;
+    }
+
+    .book-item .book-info h3 {
+        text-align: center;
+    }
+
+    .book-item .book-details {
+        text-align: center;
+    }
+
+    .book-item .buy-now-btn {
+        text-align: center;
+    }
+
+    .book-item .book-summary {
+        text-align: left;
+    }
+
     .book-cover {
         margin: 0 auto;
     }
@@ -555,17 +840,18 @@ footer {
     }
 
     .book-thumb-cover {
-        width: 120px;
-        height: 180px;
+        width: 240px;
+        height: 360px;
     }
 
     .quote-carousel {
-        height: 100px;
+        height: 80px; /* Adjusted for mobile */
         padding: 0 1rem;
     }
 
     .quote {
-        font-size: 1rem;
+        font-size: 1rem; /* Slightly smaller for mobile but proportional */
+        padding: 0 2rem;
     }
 
     .social-links {
@@ -585,14 +871,19 @@ footer {
 
     main {
         padding: 1rem;
+        margin-top: 100px; /* Adjusted for mobile */
     }
 
     .hero {
         padding: 2rem 0;
     }
 
-    .hero h1 {
-        font-size: 2rem;
+    .hero .page-title {
+        font-size: 2rem; /* Proportional to mobile logo */
+    }
+
+    .quote {
+        font-size: 0.9rem; /* Adjusted for very small screens */
     }
 
     .popup-content {

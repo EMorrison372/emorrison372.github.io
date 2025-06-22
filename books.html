@@ -3,23 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books by e.b. morrison - Author</title>
+    <title>E.B. Morrison | Books </title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- MailerLite Universal -->
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+            .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+            n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '1390171');
+    </script>
+    <!-- End MailerLite Universal -->
 </head>
 <body>
 <!-- Header -->
 <header>
     <nav>
-        <div class="logo">e.b. morrison</div>
+        <a href="/" class="logo">e.b. morrison</a>
         <ul class="nav-links">
-            <li><a href="index.html">home</a></li>
+            <!-- <li><a href="index.html">home</a></li> -->
             <li><a href="bio.html">bio</a></li>
             <li><a href="books.html">books</a></li>
             <li><a href="newsletter.html">newsletter</a></li>
             <li><a href="contact.html">contact</a></li>
-            <li><a href="PATREON_LINK_PLACEHOLDER" target="_blank">bonus content</a></li>
-            <li><a href="shop.html">shop</a></li>
+            <li><a href="https://www.patreon.com/ebmorrison" target="_blank">bonus content</a></li>
+            <!-- <li><a href="shop.html">shop</a></li> -->
+            <!-- <li><a href="links.html">links</a></li> -->
         </ul>
         <div class="menu-toggle" onclick="toggleMenu()">
             <span></span>
@@ -34,58 +44,86 @@
     <h1>My Books</h1>
 
     <div class="book-series">
-        <h2>[Series Name Placeholder]</h2>
+        <h2>Love, Lost & Found</h2>
 
         <div class="book-item" id="book1">
-            <div class="book-cover">
+            <div class="book-cover" onclick="openImageZoom('book1-cover')">
                 <span>Book Cover Placeholder</span>
             </div>
             <div class="book-info">
-                <h3>[Book Title Placeholder]</h3>
+                <h3>One Way Ticket</h3>
                 <div class="book-details">
-                    <span>Release Date: [Date]</span>
-                    <span>Heat Level: 🌶️🌶️🌶️</span>
+                    <span>Release Date: Winter 2025/26</span>
+                    <span>Spice Level: 🔥🔥🔥</span>
                 </div>
                 <div class="book-summary">
                     <p>This is where your book summary will go. Describe the plot, the main characters, the central conflict, and what makes this story special. Give readers a taste of the passion, emotion, and journey they'll experience when they pick up your book.</p>
 
                     <p>Include any content warnings, tropes, or special features that readers should know about. Make it compelling and engaging!</p>
                 </div>
+                <!-- <a href="BUY_NOW_LINK_PLACEHOLDER" class="buy-now-btn">Buy Now</a> -->
             </div>
         </div>
 
-        <div class="book-item" id="book2">
-            <div class="book-cover">
+        <!-- <div class="book-item" id="book2">
+            <div class="book-cover" onclick="openImageZoom('book2-cover')">
                 <span>Book Cover Placeholder 2</span>
             </div>
             <div class="book-info">
                 <h3>[Book Title 2 Placeholder]</h3>
                 <div class="book-details">
                     <span>Release Date: [Date 2]</span>
-                    <span>Heat Level: 🌶️🌶️🌶️🌶️</span>
+                    <span>Heat Level: 🔥🔥🔥🔥</span>
                 </div>
                 <div class="book-summary">
                     <p>Here's where the second book's compelling summary goes. Paint a picture of the romance, the emotional journey, and the unforgettable characters that readers will fall in love with. What makes this story unique and irresistible?</p>
 
                     <p>Mention any tropes, content considerations, or special elements that will help readers decide if this book is perfect for them. Build anticipation and excitement!</p>
                 </div>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+        </div> -->
+
+        <!-- Spice Level Legend -->
+        <div class="spice-legend">
+            <h2>🌶️ Spice Level Legend</h2>
+            <div class="spice-levels">
+                <div class="spice-level">
+                    <span class="spice-rating">🔥</span>
+                    <span class="spice-description">we don't know her</span>
+                </div>
+                <div class="spice-level">
+                    <span class="spice-rating">🔥🔥</span>
+                    <span class="spice-description">girl...</span>
+                </div>
+                <div class="spice-level">
+                    <span class="spice-rating">🔥🔥🔥</span>
+                    <span class="spice-description">it's giving filthy and fabulous</span>
+                </div>
+                <div class="spice-level">
+                    <span class="spice-rating">🔥🔥🔥🔥</span>
+                    <span class="spice-description">certified hole-some</span>
+                </div>
+                <div class="spice-level">
+                    <span class="spice-rating">🔥🔥🔥🔥🔥</span>
+                    <span class="spice-description">we need a safe word</span>
+                </div>
             </div>
         </div>
+
     </div>
 </main>
 
-<!-- Newsletter Popup -->
-<div class="newsletter-popup" id="newsletterPopup">
-    <div class="popup-content">
-        <button class="close-popup" onclick="closeNewsletterPopup()">&times;</button>
-        <h2>Join e.b.'s love letter</h2>
-        <p>Get exclusive updates, behind-the-scenes content, and early access to new releases!</p>
-
-        <!-- MailerLite integration placeholder for popup -->
-        <div style="border: 2px dashed rgba(255,255,255,0.3); padding: 1rem; margin: 1rem 0;">
-            <p><strong>MailerLite Integration Placeholder</strong></p>
-            <p>Paste your MailerLite embed code here for the popup signup form.</p>
+<!-- Image Zoom Modal -->
+<div class="image-zoom-modal" id="imageZoomModal" onclick="closeImageZoom()">
+    <div class="zoom-content">
+        <button class="close-zoom" onclick="closeImageZoom()">&times;</button>
+        <button class="zoom-nav zoom-nav-prev" onclick="prevZoomImage(event)">&lt;</button>
+        <div id="zoomImageContainer">
+            <!-- Dynamically populated with image or placeholder -->
         </div>
+        <button class="zoom-nav zoom-nav-next" onclick="nextZoomImage(event)">&gt;</button>
+        <div class="zoom-indicator" id="zoomIndicator">Front Cover</div>
     </div>
 </div>
 
@@ -93,10 +131,11 @@
 <footer>
     <div class="footer-content">
         <div class="social-links">
-            <a href="TIKTOK_LINK_PLACEHOLDER" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-            <a href="INSTAGRAM_LINK_PLACEHOLDER" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="GOODREADS_LINK_PLACEHOLDER" target="_blank" title="Goodreads"><i class="fab fa-goodreads"></i></a>
-            <a href="BLUESKY_LINK_PLACEHOLDER" target="_blank" title="Bluesky"><i class="fas fa-cloud"></i></a>
+            <a href="https://www.tiktok.com/@e.b.morrison" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/e.b.morrison/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.goodreads.com/ebmorrison" target="_blank" title="Goodreads"><i class="fab fa-goodreads"></i></a>
+            <a href="https://bsky.app/profile/ebmorrison.bsky.social" target="_blank" title="BlueSky"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.patreon.com/ebmorrison" target="_blank" title="Patreon"><i class="fab fa-patreon"></i></a>
         </div>
 
         <div class="footer-links">
@@ -104,7 +143,7 @@
         </div>
 
         <div class="copyright">
-            © 2025 Ethony Media. All rights reserved.
+            © 2025 E.B. Morrison. All rights reserved.
         </div>
     </div>
 </footer>
