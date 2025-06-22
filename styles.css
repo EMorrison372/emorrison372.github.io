@@ -476,22 +476,6 @@ main h2 {
     right: -60px;
 }
 
-/* Mobile responsiveness for zoom navigation */
-@media (max-width: 768px) {
-    .zoom-nav-prev {
-        left: 10px;
-    }
-
-    .zoom-nav-next {
-        right: 10px;
-    }
-
-    .zoom-nav {
-        font-size: 1.5rem;
-        padding: 0.8rem;
-    }
-}
-
 .zoom-indicator {
     position: absolute;
     bottom: -40px;
@@ -857,6 +841,30 @@ footer {
     .footer-links a {
         display: block;
         margin: 0.5rem 0;
+    }
+
+    /* Mobile zoom navigation fixes */
+    .zoom-nav-prev {
+        left: 5px !important;
+    }
+
+    .zoom-nav-next {
+        right: 5px !important;
+    }
+
+    .zoom-nav {
+        font-size: 1.5rem !important;
+        padding: 0.5rem !important;
+        width: 40px !important;
+        height: 40px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .zoom-content {
+        max-width: 95% !important;
+        max-height: 95% !important;
     }
 }
 
