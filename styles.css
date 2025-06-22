@@ -768,7 +768,8 @@ footer {
     }
 
     /* Center series title on mobile */
-    .series-title {
+    .book-series .series-title,
+    .book-series h2 {
         text-align: center !important;
     }
 
