@@ -133,6 +133,7 @@ window.onclick = function(event) {
 // Scroll animations for books page
 function initBookAnimations() {
     const bookItems = document.querySelectorAll('.book-item');
+    const spiceLegend = document.querySelector('.spice-legend');
 
     // Check if we're on books page and trigger animations
     if (bookItems.length > 0 && window.location.pathname.includes('books.html')) {
@@ -157,6 +158,14 @@ function initBookAnimations() {
                 item.classList.add('fade-in');
             }
         });
+
+        // Add animation for spice legend
+        if (spiceLegend) {
+            const spiceTop = spiceLegend.getBoundingClientRect().top;
+            if (spiceTop < windowHeight - 100) {
+                spiceLegend.classList.add('fade-in');
+            }
+        }
     });
 }
 
