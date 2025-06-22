@@ -767,6 +767,11 @@ footer {
         font-size: 2rem;
     }
 
+    /* Center series title on mobile */
+    .series-title {
+        text-align: center !important;
+    }
+
     .bio-container {
         grid-template-columns: 1fr;
         text-align: center;
